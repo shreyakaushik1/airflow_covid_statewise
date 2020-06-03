@@ -2,7 +2,7 @@
 
 to install airflow:
 
-pip install apache-airflow\
+pip install apache-airflow
 
 airflow initdb
 
