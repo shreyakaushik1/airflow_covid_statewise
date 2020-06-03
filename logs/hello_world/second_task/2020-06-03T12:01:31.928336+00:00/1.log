@@ -1,0 +1,27 @@
+[2020-06-03 17:34:20,490] {taskinstance.py:669} INFO - Dependencies all met for <TaskInstance: hello_world.second_task 2020-06-03T12:01:31.928336+00:00 [queued]>
+[2020-06-03 17:34:20,499] {taskinstance.py:669} INFO - Dependencies all met for <TaskInstance: hello_world.second_task 2020-06-03T12:01:31.928336+00:00 [queued]>
+[2020-06-03 17:34:20,499] {taskinstance.py:879} INFO - 
+--------------------------------------------------------------------------------
+[2020-06-03 17:34:20,499] {taskinstance.py:880} INFO - Starting attempt 1 of 1
+[2020-06-03 17:34:20,499] {taskinstance.py:881} INFO - 
+--------------------------------------------------------------------------------
+[2020-06-03 17:34:20,507] {taskinstance.py:900} INFO - Executing <Task(PythonOperator): second_task> on 2020-06-03T12:01:31.928336+00:00
+[2020-06-03 17:34:20,510] {standard_task_runner.py:53} INFO - Started process 15103 to run task
+[2020-06-03 17:34:20,551] {logging_mixin.py:112} INFO - Running %s on host %s <TaskInstance: hello_world.second_task 2020-06-03T12:01:31.928336+00:00 [running]> shreya-nineleaps
+[2020-06-03 17:34:20,566] {taskinstance.py:1145} ERROR - [Errno 2] No such file or directory: 'Downloads/bigquery-271709-03f68b4ecacf.json'
+Traceback (most recent call last):
+  File "/home/nineleaps/anaconda3/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 983, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/nineleaps/anaconda3/lib/python3.7/site-packages/airflow/operators/python_operator.py", line 113, in execute
+    return_value = self.execute_callable()
+  File "/home/nineleaps/anaconda3/lib/python3.7/site-packages/airflow/operators/python_operator.py", line 118, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/nineleaps/airflow/dags/hello_world.py", line 33, in second_function
+    'Downloads/bigquery-271709-03f68b4ecacf.json')
+  File "/home/nineleaps/anaconda3/lib/python3.7/site-packages/google/oauth2/service_account.py", line 218, in from_service_account_file
+    filename, require=["client_email", "token_uri"]
+  File "/home/nineleaps/anaconda3/lib/python3.7/site-packages/google/auth/_service_account_info.py", line 72, in from_filename
+    with io.open(filename, "r", encoding="utf-8") as json_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'Downloads/bigquery-271709-03f68b4ecacf.json'
+[2020-06-03 17:34:20,567] {taskinstance.py:1202} INFO - Marking task as FAILED.dag_id=hello_world, task_id=second_task, execution_date=20200603T120131, start_date=20200603T120420, end_date=20200603T120420
+[2020-06-03 17:34:30,483] {logging_mixin.py:112} INFO - [2020-06-03 17:34:30,482] {local_task_job.py:103} INFO - Task exited with return code 1

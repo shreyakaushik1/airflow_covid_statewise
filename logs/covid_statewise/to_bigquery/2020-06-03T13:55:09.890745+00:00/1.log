@@ -1,0 +1,21 @@
+[2020-06-03 19:28:08,374] {taskinstance.py:669} INFO - Dependencies all met for <TaskInstance: covid_statewise.to_bigquery 2020-06-03T13:55:09.890745+00:00 [queued]>
+[2020-06-03 19:28:08,383] {taskinstance.py:669} INFO - Dependencies all met for <TaskInstance: covid_statewise.to_bigquery 2020-06-03T13:55:09.890745+00:00 [queued]>
+[2020-06-03 19:28:08,383] {taskinstance.py:879} INFO - 
+--------------------------------------------------------------------------------
+[2020-06-03 19:28:08,383] {taskinstance.py:880} INFO - Starting attempt 1 of 1
+[2020-06-03 19:28:08,383] {taskinstance.py:881} INFO - 
+--------------------------------------------------------------------------------
+[2020-06-03 19:28:08,391] {taskinstance.py:900} INFO - Executing <Task(PythonOperator): to_bigquery> on 2020-06-03T13:55:09.890745+00:00
+[2020-06-03 19:28:08,394] {standard_task_runner.py:53} INFO - Started process 22586 to run task
+[2020-06-03 19:28:08,436] {logging_mixin.py:112} INFO - Running %s on host %s <TaskInstance: covid_statewise.to_bigquery 2020-06-03T13:55:09.890745+00:00 [running]> shreya-nineleaps
+[2020-06-03 19:28:08,452] {logging_mixin.py:112} INFO - states    object
+cases      int64
+date      object
+dtype: object
+[2020-06-03 19:28:10,022] {logging_mixin.py:112} WARNING - 0it [00:00, ?it/s]
+[2020-06-03 19:28:10,028] {logging_mixin.py:112} INFO - [2020-06-03 19:28:10,028] {gbq.py:609} INFO - 38 out of 38 rows loaded.
+[2020-06-03 19:28:13,115] {logging_mixin.py:112} WARNING - 1it [00:03,  3.09s/it]
+[2020-06-03 19:28:13,116] {logging_mixin.py:112} WARNING - 
+[2020-06-03 19:28:13,116] {python_operator.py:114} INFO - Done. Returned value was: None
+[2020-06-03 19:28:13,126] {taskinstance.py:1065} INFO - Marking task as SUCCESS.dag_id=covid_statewise, task_id=to_bigquery, execution_date=20200603T135509, start_date=20200603T135808, end_date=20200603T135813
+[2020-06-03 19:28:18,367] {logging_mixin.py:112} INFO - [2020-06-03 19:28:18,366] {local_task_job.py:103} INFO - Task exited with return code 0
