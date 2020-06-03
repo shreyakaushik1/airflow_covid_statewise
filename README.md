@@ -1,15 +1,15 @@
 # airflow_covid_statewise
 
-to install airflow:\
+to install airflow:
 
 pip install apache-airflow\
 
-airflow initdb\
+airflow initdb
 
 
-to run :\
+to run :
 
 airflow webserver\
-airflow scheduler\
+airflow scheduler
 
 the webserver will be running on 8080 port
