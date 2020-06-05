@@ -24,10 +24,10 @@ pip install google-cloud-bigquery
 
 To get credentials:
 
-1. In the Cloud Console, go to the Create service account key page.\
-2. From the Service account list, select New service account. \
-3. In the Service account name field, enter a name.\
-4. From the Role list, select Project > Owner.\
+1. In the Cloud Console, go to the Create service account key page.
+2. From the Service account list, select New service account. 
+3. In the Service account name field, enter a name.
+4. From the Role list, select Project > Owner.
 5. Click Create. A JSON file that contains your key downloads to your computer.
 
 For more information: https://cloud.google.com/bigquery/docs/reference/libraries
